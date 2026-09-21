@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B2D5B">
+  <title>PT Artha Jaya Cakrabuana | Integrated Commerce &amp; Digital Business</title>
+  <meta name="description" content="PT Artha Jaya Cakrabuana adalah perusahaan perdagangan multi-bisnis di Jakarta Selatan yang mengelola banyak unit usaha dalam satu ekosistem digital: CRM, AI, otomasi, dan data.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arthajayacakrabuana.com/">
+  <link rel="icon" type="image/png" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="PT Artha Jaya Cakrabuana">
+  <meta property="og:description" content="Many Business Units. One Smarter Future. Perusahaan perdagangan multi-bisnis dengan pengelolaan digital terpadu.">
+  <meta property="og:image" content="https://arthajayacakrabuana.com/meta/promo-meta-1080.png">
+  <meta property="og:url" content="https://arthajayacakrabuana.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+
+  <style>
+    :root {
+      --navy: #0B2D5B;
+      --navy-deep: #061A3A;
+      --blue: #1E88E5;
+      --blue-soft: #78C8FF;
+      --teal: #00C2A8;
+      --light: #F4F7FB;
+      --dark: #1A1A1A;
+      --ink: #0B2D5B;
+      --body: #3F4F66;
+      --muted: #607086;
+      --line: #DCE5F0;
+      --white: #fff;
+      --radius: 20px;
+      --container: 1180px;
+      --font: Montserrat, "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      min-width: 320px; background: var(--white); color: var(--body);
+      font-family: var(--font); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
+    .container { width: min(var(--container), 92%); margin-inline: auto; }
+
+    /* ---------- topbar + header ---------- */
+    .topbar { background: var(--navy-deep); color: #A9C3E2; font-size: 12.5px; }
+    .topbar-row { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; flex-wrap: wrap; }
+    .topbar strong { color: #fff; font-weight: 600; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .brand img { width: 64px; height: auto; flex: none; }
+    .brand-copy { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+    .brand-copy strong { color: var(--navy); font-size: 15px; font-weight: 800; letter-spacing: .04em; }
+    .brand-copy span { color: var(--blue); font-size: 10.5px; font-weight: 600; letter-spacing: .18em; }
+    .nav { display: flex; gap: 28px; font-size: 14px; font-weight: 600; color: #46566D; }
+    .nav a { padding: 6px 0; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+    .nav a:hover { color: var(--navy); border-color: var(--teal); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 12px; font: 700 14px var(--font); border: 0; cursor: pointer; transition: transform .15s, box-shadow .2s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 10px 26px rgba(30,136,229,.28); }
+    .btn-ghost { background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.28); }
+    .btn-white { background: #fff; color: var(--navy); }
+    .menu-button { display: none; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: #fff; color: var(--navy); cursor: pointer; place-items: center; }
+    .mobile-menu { display: none; position: fixed; inset: 76px 0 auto 0; z-index: 49; background: #fff; border-bottom: 1px solid var(--line); padding: 14px 4% 22px; flex-direction: column; gap: 4px; box-shadow: 0 24px 40px rgba(6,26,58,.12); }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { padding: 13px 4px; font-weight: 600; color: var(--navy); border-bottom: 1px solid var(--line); }
+    .mobile-menu .btn { margin-top: 12px; justify-content: center; color: #fff; border: 0; }
+
+    /* ---------- hero ---------- */
+    .hero { position: relative; overflow: hidden; color: #fff; background: linear-gradient(135deg, var(--navy-deep) 0%, #0A4489 62%, #0E6BB8 100%); }
+    .hero::before, .hero::after { content: ""; position: absolute; left: -5%; right: -5%; height: 150px; border-top: 2px solid rgba(30,136,229,.45); border-radius: 50%; }
+    .hero::before { bottom: -60px; }
+    .hero::after { bottom: -82px; border-color: rgba(0,194,168,.4); }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; padding: 96px 0 128px; position: relative; z-index: 1; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .2em; font-size: 12px; font-weight: 700; color: var(--blue-soft); display: flex; align-items: center; gap: 12px; }
+    .eyebrow::before { content: ""; width: 34px; height: 3px; border-radius: 2px; background: var(--teal); }
+    h1 { font-size: clamp(38px, 5.4vw, 68px); line-height: 1.06; letter-spacing: -.035em; font-weight: 800; margin: 20px 0 24px; text-wrap: balance; }
+    h1 span { color: var(--blue-soft); }
+    .hero-lead { font-size: 18px; color: #CFE2F8; max-width: 620px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 34px 0 30px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .hero-tags span { font-size: 12.5px; font-weight: 600; padding: 7px 14px; border-radius: 99px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.16); color: #DDEBFB; }
+    .logo-card { background: #fff; border-radius: 30px; padding: 44px 40px; box-shadow: 0 40px 90px rgba(0,10,30,.38); }
+    .logo-card-foot { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: 12.5px; font-weight: 600; }
+    .logo-card-foot b { color: var(--navy); }
+
+    /* ---------- stats ---------- */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 20px 60px rgba(11,45,91,.12); margin-top: -56px; position: relative; z-index: 3; overflow: hidden; }
+    .stat { padding: 26px 28px; border-right: 1px solid var(--line); }
+    .stat:last-child { border-right: 0; }
+    .stat b { display: block; font-size: 28px; font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
+    .stat small { color: var(--muted); font-size: 13px; font-weight: 500; }
+
+    /* ---------- sections ---------- */
+    section { padding: 96px 0; }
+    .soft { background: var(--light); }
+    .dark { background: linear-gradient(135deg, var(--navy-deep), #0A3E80); color: #fff; }
+    .head { max-width: 760px; margin-bottom: 48px; }
+    .head .eyebrow { color: var(--blue); }
+    .dark .head .eyebrow { color: var(--blue-soft); }
+    h2 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.14; letter-spacing: -.03em; font-weight: 800; color: var(--navy); margin: 14px 0 16px; text-wrap: balance; }
+    .dark h2 { color: #fff; }
+    .head p { font-size: 17px; color: var(--muted); }
+    .dark .head p { color: #C5DAF2; }
+    h3 { color: var(--navy); font-size: 18px; font-weight: 700; line-height: 1.35; letter-spacing: -.01em; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .card p { margin-top: 10px; font-size: 15px; }
+    .soft .card { border-color: transparent; box-shadow: 0 8px 30px rgba(11,45,91,.06); }
+    .tag { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--blue); background: #E6F2FD; padding: 5px 10px; border-radius: 8px; margin-bottom: 14px; }
+    .quote { font-size: 24px; line-height: 1.45; font-weight: 700; color: var(--navy); letter-spacing: -.015em; padding-left: 24px; border-left: 5px solid var(--teal); margin-bottom: 26px; }
+    .prose p + p { margin-top: 16px; }
+
+    .chain { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin-top: 8px; }
+    .chain li { list-style: none; position: relative; padding: 22px 16px 0; text-align: center; font-weight: 700; font-size: 14px; color: var(--navy); }
+    .chain li small { display: block; font-weight: 500; font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+    .chain li::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--line); }
+    .chain li:first-child::before { border-radius: 4px 0 0 4px; }
+    .chain li:last-child::before { border-radius: 0 4px 4px 0; }
+    .chain li:nth-child(1)::before { background: #9CC9F5; } .chain li:nth-child(2)::before { background: #6DB0F0; }
+    .chain li:nth-child(3)::before { background: var(--blue); } .chain li:nth-child(4)::before { background: #1670C0; }
+    .chain li:nth-child(5)::before { background: #12A390; } .chain li:nth-child(6)::before { background: var(--teal); }
+
+    .mission { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; }
+    .mission div { padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .mission div:nth-child(3n) { border-right: 0; } .mission div:nth-child(n+4) { border-bottom: 0; }
+    .mission b { display: block; font-size: 12px; letter-spacing: .16em; color: var(--teal); font-weight: 800; margin-bottom: 8px; }
+    .mission p { font-size: 15px; }
+
+    .biz { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .biz article { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+    .biz h3 { font-size: 17px; }
+    .biz p { font-size: 14.5px; }
+    .biz small { margin-top: auto; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 12px; color: var(--muted); }
+    .biz .kbli { font-size: 12px; font-weight: 700; color: var(--blue); letter-spacing: .06em; }
+
+    .tech { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .tech .card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); }
+    .tech h3 { color: #fff; } .tech p { color: #C5DAF2; }
+    .tech .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(120,200,255,.14); color: var(--blue-soft); font-weight: 800; font-size: 12px; letter-spacing: .06em; margin-bottom: 16px; }
+
+    .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px 40px; }
+    .values div { border-top: 3px solid var(--navy); padding-top: 16px; }
+    .values p { font-size: 15px; margin-top: 6px; }
+
+    .info { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .row { padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .row:last-child { border-bottom: 0; }
+    .row b { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 2px; }
+    .row span { color: var(--navy); font-weight: 600; }
+    .row a { text-decoration: underline; text-decoration-color: var(--teal); text-underline-offset: 3px; }
+
+    .cta { background: linear-gradient(135deg, var(--navy), #0E6BB8); border-radius: 28px; padding: 56px; display: flex; justify-content: space-between; align-items: center; gap: 32px; color: #fff; flex-wrap: wrap; }
+    .cta h2 { color: #fff; margin: 0 0 10px; }
+    .cta p { color: #CFE6FB; max-width: 520px; }
+
+    footer { background: var(--navy-deep); color: #A9C3E2; padding: 56px 0 40px; font-size: 14px; }
+    .foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+    footer strong { color: #fff; display: block; margin-bottom: 8px; letter-spacing: .04em; }
+    footer a:hover { color: #fff; }
+    .foot img { width: 210px; margin-bottom: 16px; }
+    .disclaimer { margin-top: 36px; padding-top: 24px; border-top: 1px solid #143659; font-size: 12px; color: #8AA5C4; line-height: 1.7; }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    @media (max-width: 980px) {
+      .nav, .header-actions .btn { display: none; }
+      .menu-button { display: grid; }
+      .hero-grid, .grid-2, .info, .foot { grid-template-columns: 1fr; }
+      .hero-grid { padding: 64px 0 108px; gap: 44px; }
+      .logo-card { max-width: 520px; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .grid-3, .biz, .tech, .values { grid-template-columns: 1fr 1fr; }
+      .chain { grid-template-columns: repeat(2, 1fr); gap: 22px 0; }
+      .mission { grid-template-columns: 1fr 1fr; }
+      .mission div:nth-child(3n) { border-right: 1px solid var(--line); } .mission div:nth-child(2n) { border-right: 0; }
+      .mission div:nth-child(n+4) { border-bottom: 1px solid var(--line); } .mission div:nth-child(n+5) { border-bottom: 0; }
+    }
+    @media (max-width: 620px) {
+      section { padding: 68px 0; }
+      .brand-copy span { display: none; }
+      .grid-3, .biz, .tech, .values, .mission, .chain { grid-template-columns: 1fr; }
+      .mission div, .mission div:nth-child(n) { border-right: 0; border-bottom: 1px solid var(--line); }
+      .mission div:last-child { border-bottom: 0; }
+      .stat { padding: 20px; } .stat b { font-size: 22px; }
+      .cta { padding: 36px 26px; }
+      .logo-card { padding: 30px 24px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PT Artha Jaya Cakrabuana",
+    "legalName": "PT ARTHA JAYA CAKRABUANA",
+    "url": "https://arthajayacakrabuana.com/",
+    "logo": "https://arthajayacakrabuana.com/meta/logo-app-meta-1024.png",
+    "description": "Perusahaan perdagangan multi-bisnis dengan pengelolaan digital terpadu.",
+    "telephone": "+62 877-4456-0714",
+    "email": "arthajayacakrabuana@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Bintaro Raya Selatan No. 8, Kebayoran Lama Utara, Kebayoran Lama",
+      "addressLocality": "Jakarta Selatan",
+      "addressRegion": "DKI Jakarta",
+      "postalCode": "12240",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-row">
+      <div><strong>Badan usaha terdaftar</strong> &middot; NIB 2408260083374</div>
+      <div>Jakarta Selatan, Indonesia</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#beranda" aria-label="PT Artha Jaya Cakrabuana, ke atas">
+        <img src="assets/ajc-mark.png" alt="" width="64" height="27">
+        <span class="brand-copy">
+          <strong>PT ARTHA JAYA CAKRABUANA</strong>
+          <span>INTEGRATED COMMERCE &amp; DIGITAL BUSINESS</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#bisnis">Bidang Usaha</a>
+        <a href="#digital">Ekosistem Digital</a>
+        <a href="#profil">Profil</a>
+        <a href="privacy-policy.html">Privasi</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary" href="#kontak">Hubungi Kami</a>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#tentang">Tentang Perusahaan</a>
+    <a href="#bisnis">Bidang Usaha</a>
+    <a href="#digital">Ekosistem Digital</a>
+    <a href="#profil">Profil Perusahaan</a>
+    <a href="privacy-policy.html">Kebijakan Privasi</a>
+    <a class="btn btn-primary" href="#kontak">Hubungi Kami</a>
+  </div>
+
+  <main>
+    <header class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">Integrated Commerce &amp; Digital Business</div>
+          <h1>Many Business Units. <span>One Smarter Future.</span></h1>
+          <p class="hero-lead"><strong>PT Artha Jaya Cakrabuana</strong> adalah perusahaan perdagangan multi-bisnis di Jakarta Selatan. Kami mengelola berbagai unit usaha dalam satu ekosistem: pelanggan, komunikasi, penjualan, dan data terhubung, bukan berjalan sendiri-sendiri.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#bisnis">Lihat Bidang Usaha</a>
+            <a class="btn btn-ghost" href="#digital">Ekosistem Digital</a>
+          </div>
+          <div class="hero-tags" aria-label="Empat lapisan ekosistem">
+            <span>Commerce</span><span>People</span><span>Technology</span><span>Data</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="logo-card">
+            <img src="meta/logo-utama.png" alt="Logo PT Artha Jaya Cakrabuana" width="1649" height="873">
+            <div class="logo-card-foot"><span><b>Real Business.</b></span><span><b>Smarter Together.</b></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="stats reveal">
+        <div class="stat"><b>9</b><small>Kategori usaha pada NIB</small></div>
+        <div class="stat"><b>PMDN</b><small>Status penanaman modal</small></div>
+        <div class="stat"><b>2026</b><small>Tahun pendirian usaha</small></div>
+        <div class="stat"><b>Jakarta Selatan</b><small>Kantor pusat</small></div>
+      </div>
+    </div>
+
+    <section id="tentang">
+      <div class="container">
+        <div class="head reveal">
+          <div class="eyebrow">Tentang AJC</div>
+          <h2>Semakin banyak bisnis yang dikelola, semakin penting sistem yang menghubungkannya.</h2>
+          <p>PT Artha Jaya Cakrabuana bergerak di perdagangan barang dan kebutuhan usaha dengan cakupan produk yang beragam. Pertumbuhan kami tidak hanya bertumpu pada perdagangan, tetapi juga pada cara semua lini itu dikelola.</p>
+        </div>
+        <div class="grid-2">
+          <div class="reveal">
+            <p class="quote">Teknologi bukan sekadar tambahan. Teknologi adalah cara membuat banyak bisnis bekerja sebagai satu.</p>
+          </div>
+          <div class="reveal prose">
+            <p>Daripada mengelola tiap lini sebagai bisnis yang berdiri sendiri tanpa hubungan data, kami membangun pengelolaan terpusat. Pelanggan, prospek, komunikasi, aktivitas penjualan, tindak lanjut, dan operasional dari berbagai unit diarahkan ke satu ekosistem digital.</p>
+            <p>Dengan begitu perusahaan bisa tumbuh tanpa kehilangan kendali atas hubungan dengan pelanggan dan aktivitas setiap unit usaha.</p>
+          </div>
+        </div>
+        <div class="reveal" style="margin-top:56px">
+          <h3 style="margin-bottom:22px">Alur pengelolaan kami</h3>
+          <ol class="chain">
+            <li>Unit Bisnis<small>Berbagai lini perdagangan</small></li>
+            <li>Kanal Pelanggan<small>Inquiry &amp; komunikasi</small></li>
+            <li>CRM Terpadu<small>Satu data pelanggan</small></li>
+            <li>AI &amp; Otomasi<small>Bantu, arahkan, tindak lanjut</small></li>
+            <li>Data<small>Aktivitas jadi informasi</small></li>
+            <li>Insight Manajemen<small>Keputusan lebih cepat</small></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="visi">
+      <div class="container">
+        <div class="grid-2" style="margin-bottom:48px">
+          <div class="reveal">
+            <div class="eyebrow" style="color:var(--blue)">Visi</div>
+            <h2>Perusahaan multi-bisnis yang terpercaya, adaptif, dan berkelanjutan.</h2>
+            <p>Mengintegrasikan perdagangan, pengelolaan pelanggan, dan teknologi dalam satu ekosistem bisnis, sehingga banyak unit usaha bisa dikelola secara terstruktur, terukur, dan siap berkembang.</p>
+          </div>
+          <div class="reveal">
+            <div class="eyebrow" style="color:var(--blue)">Misi</div>
+            <h2>Enam langkah yang kami pegang.</h2>
+            <p>Dari mengembangkan unit perdagangan sampai membangun pertumbuhan bersama pelanggan, supplier, vendor, dan mitra.</p>
+          </div>
+        </div>
+        <div class="mission reveal">
+          <div><b>01 &middot; DEVELOP</b><p>Mengembangkan unit perdagangan yang relevan dengan kebutuhan pelanggan dan pasar.</p></div>
+          <div><b>02 &middot; INTEGRATE</b><p>Menghubungkan aktivitas antarunit lewat sistem operasional dan customer management terpadu.</p></div>
+          <div><b>03 &middot; DIGITALIZE</b><p>Mengurangi proses manual lewat digitalisasi workflow dan business automation.</p></div>
+          <div><b>04 &middot; UNDERSTAND</b><p>Memakai data untuk memahami kebutuhan pelanggan dan performa tiap unit.</p></div>
+          <div><b>05 &middot; INNOVATE</b><p>Memanfaatkan teknologi, termasuk kecerdasan buatan, untuk produktivitas dan kualitas operasional.</p></div>
+          <div><b>06 &middot; GROW</b><p>Tumbuh secara terukur dan berkelanjutan bersama pelanggan, supplier, vendor, dan mitra.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bisnis">
+      <div class="container">
+        <div class="head reveal">
+          <div class="eyebrow">Bidang Usaha</div>
+          <h2>Sembilan kategori perdagangan di bawah satu pengelolaan.</h2>
+          <p>Kategori berikut mengikuti lampiran NIB perusahaan. Judul KBLI ditulis persis seperti pada dokumen.</p>
+        </div>
+        <div class="biz">
+          <article class="reveal"><span class="kbli">KBLI 47521</span><h3>Bahan &amp; Material Konstruksi</h3><p>Bahan dan material untuk kebutuhan pembangunan dan kegiatan usaha.</p><small>Perdagangan Eceran Bahan dan Material Konstruksi</small></article>
+          <article class="reveal"><span class="kbli">KBLI 47523</span><h3>Perkakas &amp; Peralatan</h3><p>Perkakas dan peralatan pertukangan untuk rumah tangga maupun usaha.</p><small>Perdagangan Eceran Perkakas dan Peralatan Pertukangan</small></article>
+          <article class="reveal"><span class="kbli">KBLI 47405</span><h3>Mesin &amp; Peralatan Kantor</h3><p>Mesin dan peralatan yang mendukung aktivitas bisnis dan operasional kantor.</p><small>Perdagangan Eceran Mesin dan Peralatan Kantor</small></article>
+          <article class="reveal"><span class="kbli">KBLI 47592</span><h3>Elektronik &amp; Peralatan Listrik Rumah Tangga</h3><p>Peralatan listrik rumah tangga, penerangan, dan perlengkapannya.</p><small>Perdagangan Eceran Peralatan Listrik Rumah Tangga, Peralatan Penerangan, dan Perlengkapannya</small></article>
+          <article class="reveal"><span class="kbli">KBLI 47591</span><h3>Furnitur</h3><p>Berbagai kategori furnitur untuk rumah, kantor, dan bisnis.</p><small>Perdagangan Eceran Furnitur</small></article>
+          <article class="reveal"><span class="kbli">KBLI 47599</span><h3>Perlengkapan Rumah Tangga</h3><p>Peralatan dan perlengkapan rumah tangga untuk beragam kebutuhan konsumen.</p><small>Perdagangan Eceran Peralatan dan Perlengkapan Rumah Tangga Lainnya YTDL</small></article>
+          <article class="reveal"><span class="kbli">KBLI 47593</span><h3>Perlengkapan Dapur &amp; Makan</h3><p>Barang pecah belah, perlengkapan dapur, dan perlengkapan makan.</p><small>Perdagangan Eceran Barang Pecah Belah; Perlengkapan Dapur dan Makan</small></article>
+          <article class="reveal"><span class="kbli">KBLI 47773</span><h3>Bahan Kimia</h3><p>Perdagangan bahan kimia sesuai ruang lingkup dan ketentuan kegiatan usaha perusahaan.</p><small>Perdagangan Eceran Bahan Kimia</small></article>
+          <article class="reveal"><span class="kbli">KBLI 47793</span><h3>Alat Transportasi Air</h3><p>Alat transportasi air dan perlengkapannya sesuai kegiatan usaha perusahaan.</p><small>Perdagangan Eceran Alat Transportasi Air dan Perlengkapannya</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="digital">
+      <div class="container">
+        <div class="head reveal">
+          <div class="eyebrow">Ekosistem Digital</div>
+          <h2>CRM, AI, otomasi, dan data untuk mengelola banyak unit usaha.</h2>
+          <p>Teknologi kami posisikan sebagai lapisan pendukung operasional. Tujuannya sederhana: lebih sedikit pekerjaan manual, lebih banyak visibilitas, keputusan lebih cepat.</p>
+        </div>
+        <div class="tech">
+          <div class="card reveal"><div class="ico">CRM</div><h3>CRM Terpadu</h3><p>Satu pandangan pelanggan lintas unit: lead, riwayat, pipeline, segmentasi, dan tindak lanjut.</p></div>
+          <div class="card reveal"><div class="ico">AI</div><h3>Asisten AI</h3><p>Membantu merangkum percakapan, mengklasifikasi kebutuhan, dan mengingatkan tindak lanjut. Manusia tetap memutuskan hal yang butuh pertimbangan bisnis.</p></div>
+          <div class="card reveal"><div class="ico">OTO</div><h3>Business Automation</h3><p>Routing lead, penugasan, pengingat, dan eskalasi internal supaya operasi tumbuh tanpa kehilangan kendali.</p></div>
+          <div class="card reveal"><div class="ico">CX</div><h3>Customer Engagement</h3><p>Komunikasi diatur menurut unit bisnis, profil, minat, dan status pelanggan, bukan satu pola untuk semua.</p></div>
+          <div class="card reveal"><div class="ico">DATA</div><h3>Data &amp; Analytics</h3><p>Volume lead, konversi, performa respons, dan aktivitas tiap unit menjadi bahan perbaikan berkelanjutan.</p></div>
+          <div class="card reveal"><div class="ico">SEC</div><h3>Tata Kelola &amp; Keamanan</h3><p>Akses berbasis peran, pencatatan aktivitas, pengelolaan data, dan penggunaan AI yang bertanggung jawab.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nilai">
+      <div class="container">
+        <div class="head reveal">
+          <div class="eyebrow">Nilai Utama</div>
+          <h2>Enam nilai yang mengarahkan cara kami bekerja.</h2>
+        </div>
+        <div class="values reveal">
+          <div><h3>Integrity</h3><p>Menjalankan usaha secara bertanggung jawab dan membangun kepercayaan.</p></div>
+          <div><h3>Innovation</h3><p>Terus mencari pendekatan, proses, dan teknologi yang meningkatkan kualitas dan efisiensi.</p></div>
+          <div><h3>Integration</h3><p>Menghubungkan bagian-bagian perusahaan supaya informasi tidak berjalan terpisah.</p></div>
+          <div><h3>Customer Centricity</h3><p>Memahami kebutuhan pelanggan sebagai bagian penting dari pengembangan bisnis.</p></div>
+          <div><h3>Collaboration</h3><p>Membangun hubungan jangka panjang dengan pelanggan, supplier, vendor, dan mitra.</p></div>
+          <div><h3>Sustainable Growth</h3><p>Tumbuh sesuai kemampuan operasional dan dengan pandangan jangka panjang.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="kemitraan">
+      <div class="container">
+        <div class="head reveal">
+          <div class="eyebrow" style="color:var(--blue)">Kemitraan</div>
+          <h2>Terbuka untuk kolaborasi yang saling menguntungkan.</h2>
+          <p>Kami terbuka bekerja sama dengan supplier, distributor, mitra bisnis, penyedia teknologi dan perangkat lunak, penyedia jasa, mitra operasional, serta pelanggan korporat.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal"><h3>Kemitraan Komersial</h3><p>Kolaborasi untuk kebutuhan produk, pasokan, distribusi, dan pengembangan kategori usaha.</p></div>
+          <div class="card reveal"><h3>Kemitraan Operasional</h3><p>Kerja sama yang meningkatkan kualitas proses, layanan, dan kapabilitas operasional.</p></div>
+          <div class="card reveal"><h3>Teknologi</h3><p>Integrasi teknologi untuk CRM, otomasi, customer engagement, data, dan produktivitas internal.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profil">
+      <div class="container">
+        <div class="head reveal">
+          <div class="eyebrow">Profil Perusahaan</div>
+          <h2>Identitas perusahaan.</h2>
+          <p>Informasi disusun dari dokumen NIB perusahaan.</p>
+        </div>
+        <div class="info">
+          <div class="card reveal">
+            <div class="row"><b>Nama pelaku usaha</b><span>PT ARTHA JAYA CAKRABUANA</span></div>
+            <div class="row"><b>NIB</b><span>2408260083374</span></div>
+            <div class="row"><b>Status penanaman modal</b><span>PMDN</span></div>
+            <div class="row"><b>Tanggal NIB</b><span>24 Agustus 2026</span></div>
+            <div class="row"><b>Bentuk usaha</b><span>Perusahaan perdagangan multi-bisnis</span></div>
+          </div>
+          <div class="card reveal">
+            <div class="row"><b>Kantor pusat</b><span>Jl. Bintaro Raya Selatan No. 8, Kebayoran Lama Utara, Kebayoran Lama, Jakarta Selatan, DKI Jakarta 12240</span></div>
+            <div class="row"><b>Telepon</b><span><a href="tel:+6287744560714">0877 4456 0714</a></span></div>
+            <div class="row"><b>Email</b><span><a href="mailto:arthajayacakrabuana@gmail.com">arthajayacakrabuana@gmail.com</a></span></div>
+            <div class="row"><b>Kebijakan privasi</b><span><a href="privacy-policy.html">Baca kebijakan privasi</a> &middot; <a href="privacy-policy.html#penghapusan-data">Penghapusan data</a></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" style="padding-top:0">
+      <div class="container">
+        <div class="cta reveal">
+          <div>
+            <h2>Real Business. Smarter Together.</h2>
+            <p>Hubungi PT Artha Jaya Cakrabuana untuk kebutuhan bisnis dan kolaborasi.</p>
+          </div>
+          <a class="btn btn-white" href="mailto:arthajayacakrabuana@gmail.com">Kirim Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="foot">
+        <div>
+          <img src="meta/logo-utama-putih.png" alt="PT Artha Jaya Cakrabuana" width="240" height="127">
+          <p>Integrated Commerce &amp; Digital Business<br>Many Business Units. One Smarter Future.</p>
+        </div>
+        <div>
+          <strong>Kantor</strong>
+          <p>Jl. Bintaro Raya Selatan No. 8<br>Kebayoran Lama Utara, Kebayoran Lama<br>Jakarta Selatan 12240</p>
+        </div>
+        <div>
+          <strong>Kontak</strong>
+          <p><a href="tel:+6287744560714">0877 4456 0714</a><br><a href="mailto:arthajayacakrabuana@gmail.com">arthajayacakrabuana@gmail.com</a><br><a href="privacy-policy.html">Kebijakan Privasi</a></p>
+        </div>
+      </div>
+      <p class="disclaimer">&copy; 2026 PT Artha Jaya Cakrabuana. Penyebutan CRM, kecerdasan buatan, otomasi, analitik data, dan customer engagement di situs ini menggambarkan pemanfaatan atau arah pengembangan teknologi perusahaan. Penyebutan itu tidak dengan sendirinya menyatakan bahwa perusahaan adalah mitra resmi, reseller resmi, pemegang sertifikasi, atau pihak yang diberi otorisasi oleh platform atau perusahaan teknologi tertentu, kecuali status tersebut telah diperoleh secara resmi. Kegiatan usaha formal mengikuti perizinan dan ruang lingkup usaha perusahaan yang berlaku.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('menuButton'), menu = document.getElementById('mobileMenu');
+      btn.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>
+</html>
